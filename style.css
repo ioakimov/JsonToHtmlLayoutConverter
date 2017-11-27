@@ -5,9 +5,14 @@ html, body {
     height: 100%;
 }
 
-.dashboard-canvas  {
+.dashboard-container  {
 	height: 100%;
 	width: 100%;
+}
+
+/*Mobile specific paddings etc.*/
+.dashboard-container.is-mobile {
+
 }
 
 .layout-container-hirizontal, .layout-container-vertical {
@@ -19,7 +24,13 @@ html, body {
 	display: table;
 	width: 100%;
 	white-space : nowrap;
-	height:auto;
+	/*Child containers will be able to set height in percents*/
+	/*only if parent container has at least some absolute height*/
+	height: 1px;
+}
+
+.layout-container-hirizontal.fixed {
+	 table-layout: fixed;
 }
 
 .layout-container-vertical {
